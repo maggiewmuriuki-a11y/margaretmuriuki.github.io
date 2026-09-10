@@ -1,13 +1,33 @@
-<!DOCTYPE html>
+Absolutely. Below is the **entire `index.html` file**, rebuilt from the version you provided.
 
+ I have:
+
+ - Kept the overall design and colours.
+- Strengthened the **Career** section for Customer Success / Operations positioning.
+- Kept your actual job titles rather than inventing CSM titles.
+- Changed the navigation from **Experience → Career**.
+- Removed the old **Agent Onboarding** wording from the portfolio descriptions.
+- Renamed the portfolio display descriptions so they read as transferable process/operations work.
+- Kept your existing portfolio filenames so your downloads don't break.
+- Kept the 2026 footer.
+- Kept the hero as **Customer Success & Operations Specialist**.
+
+ **Delete everything currently inside `index.html`, paste everything below, and save/commit it.**
+
+```
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Margaret Muriuki | Customer Success & Operations Specialist</title>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 <style>
+
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -41,7 +61,10 @@
     line-height: 1.6;
   }
 
-  /* NAV */
+  /* =========================
+     NAVIGATION
+     ========================= */
+
   nav {
     position: fixed;
     top: 0;
@@ -87,14 +110,25 @@
     color: white;
   }
 
-  /* HERO */
+  /* =========================
+     HERO
+     ========================= */
+
   .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 50%, #1a3d6b 100%);
+    background: linear-gradient(
+      135deg,
+      #1F4E79 0%,
+      #2E75B6 50%,
+      #1a3d6b 100%
+    );
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 80px 2rem 4rem;
+
     position: relative;
     overflow: hidden;
   }
@@ -103,6 +137,7 @@
     content: '';
     position: absolute;
     inset: 0;
+
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
@@ -110,28 +145,38 @@
     max-width: 820px;
     width: 100%;
     text-align: center;
+
     position: relative;
     z-index: 1;
   }
 
   .hero-badge {
     display: inline-block;
+
     background: rgba(255,255,255,0.12);
     border: 1px solid rgba(255,255,255,0.2);
+
     color: rgba(255,255,255,0.9);
+
     padding: 0.4rem 1.2rem;
     border-radius: 100px;
+
     font-size: 0.8rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+
     margin-bottom: 1.5rem;
   }
 
   .hero h1 {
     font-family: 'DM Serif Display', serif;
+
     font-size: clamp(2.4rem, 6vw, 4rem);
+
     color: white;
+
     line-height: 1.15;
+
     margin-bottom: 1.2rem;
   }
 
@@ -141,46 +186,72 @@
 
   .hero p {
     font-size: 1.1rem;
+
     color: rgba(255,255,255,0.82);
+
     max-width: 650px;
+
     margin: 0 auto 2.5rem;
+
     font-weight: 300;
   }
 
   .hero-ctas {
     display: flex;
+
     gap: 1rem;
+
     justify-content: center;
+
     flex-wrap: wrap;
   }
 
   .btn-primary {
     background: var(--accent);
+
     color: white;
+
     padding: 0.75rem 2rem;
+
     border-radius: 8px;
+
     text-decoration: none;
+
     font-weight: 500;
+
     font-size: 0.95rem;
+
     transition: transform 0.2s, box-shadow 0.2s;
+
     display: inline-block;
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(232,160,32,0.3);
+
+    box-shadow:
+      0 8px 20px rgba(232,160,32,0.3);
   }
 
   .btn-outline {
     background: transparent;
+
     color: white;
+
     padding: 0.75rem 2rem;
+
     border-radius: 8px;
+
     border: 1px solid rgba(255,255,255,0.4);
+
     text-decoration: none;
+
     font-weight: 400;
+
     font-size: 0.95rem;
+
     transition: background 0.2s;
+
     display: inline-block;
   }
 
@@ -190,11 +261,18 @@
 
   .hero-stats {
     display: flex;
+
     justify-content: center;
+
     gap: 3rem;
+
     margin-top: 4rem;
+
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.12);
+
+    border-top:
+      1px solid rgba(255,255,255,0.12);
+
     flex-wrap: wrap;
   }
 
@@ -204,169 +282,254 @@
 
   .stat-num {
     font-family: 'DM Serif Display', serif;
+
     font-size: 2.2rem;
+
     color: white;
+
     line-height: 1;
   }
 
   .stat-label {
     font-size: 0.78rem;
+
     color: rgba(255,255,255,0.6);
+
     margin-top: 0.3rem;
+
     letter-spacing: 0.5px;
+
     text-transform: uppercase;
   }
 
-  /* SECTIONS */
+  /* =========================
+     SECTIONS
+     ========================= */
+
   section {
     padding: 5rem 2rem;
   }
 
   .container {
     max-width: 1000px;
+
     margin: 0 auto;
   }
 
   .section-label {
     font-size: 0.75rem;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
+
     color: var(--blue);
+
     font-weight: 500;
+
     margin-bottom: 0.5rem;
   }
 
   .section-title {
     font-family: 'DM Serif Display', serif;
+
     font-size: 2.2rem;
+
     color: var(--navy);
+
     margin-bottom: 1rem;
+
     line-height: 1.2;
   }
 
   .section-sub {
     color: var(--muted);
+
     font-size: 1rem;
+
     max-width: 650px;
+
     margin-bottom: 3rem;
+
     font-weight: 300;
   }
 
-  /* ABOUT */
+  /* =========================
+     ABOUT
+     ========================= */
+
   #about {
     background: white;
   }
 
   .about-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 4rem;
+
     align-items: start;
   }
 
   .about-text p {
     color: var(--muted);
+
     margin-bottom: 1rem;
+
     font-size: 0.975rem;
+
     line-height: 1.8;
   }
 
   .skills-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 0.6rem;
   }
 
   .skill-tag {
     background: var(--light-blue);
+
     color: var(--navy);
+
     padding: 0.5rem 0.8rem;
+
     border-radius: 6px;
+
     font-size: 0.8rem;
+
     font-weight: 500;
-    border-left: 3px solid var(--blue);
+
+    border-left:
+      3px solid var(--blue);
   }
 
-  /* HOW I WORK */
+  /* =========================
+     HOW I WORK
+     ========================= */
+
   #approach {
     background: var(--bg);
   }
 
   .approach-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    grid-template-columns:
+      repeat(auto-fit, minmax(150px, 1fr));
+
     gap: 1rem;
   }
 
   .approach-card {
     background: white;
+
     border: 1px solid var(--border);
+
     border-radius: 10px;
+
     padding: 1.4rem;
+
     text-align: center;
   }
 
   .approach-number {
     font-family: 'DM Serif Display', serif;
+
     font-size: 1.8rem;
+
     color: var(--blue);
+
     margin-bottom: 0.4rem;
   }
 
   .approach-title {
     color: var(--navy);
+
     font-weight: 600;
+
     font-size: 0.9rem;
+
     margin-bottom: 0.4rem;
   }
 
   .approach-text {
     color: var(--muted);
+
     font-size: 0.78rem;
+
     line-height: 1.5;
   }
 
-  /* PORTFOLIO */
+  /* =========================
+     PORTFOLIO
+     ========================= */
+
   #portfolio {
     background: white;
   }
 
   .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    grid-template-columns:
+      repeat(auto-fit, minmax(280px, 1fr));
+
     gap: 1.5rem;
   }
 
   .portfolio-card {
     background: var(--bg);
+
     border-radius: 12px;
+
     border: 1px solid var(--border);
+
     overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
+
+    transition:
+      transform 0.25s,
+      box-shadow 0.25s;
+
     display: flex;
+
     flex-direction: column;
   }
 
   .portfolio-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(31,78,121,0.1);
+
+    box-shadow:
+      0 12px 32px rgba(31,78,121,0.1);
   }
 
   .card-header {
     padding: 1.5rem;
+
     display: flex;
+
     align-items: flex-start;
+
     gap: 1rem;
   }
 
   .card-icon {
     width: 48px;
     height: 48px;
+
     border-radius: 10px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-size: 1.3rem;
+
     flex-shrink: 0;
   }
 
@@ -388,52 +551,76 @@
 
   .card-title {
     font-weight: 600;
+
     font-size: 0.975rem;
+
     color: var(--navy);
+
     margin-bottom: 0.25rem;
   }
 
   .card-subtitle {
     font-size: 0.8rem;
+
     color: var(--muted);
   }
 
   .card-body {
     padding: 0 1.5rem 1rem;
+
     flex: 1;
   }
 
   .card-body p {
     font-size: 0.875rem;
+
     color: var(--muted);
+
     line-height: 1.7;
   }
 
   .card-footer {
     padding: 1rem 1.5rem;
-    border-top: 1px solid var(--border);
+
+    border-top:
+      1px solid var(--border);
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
   }
 
   .card-tag {
     font-size: 0.72rem;
+
     font-weight: 500;
+
     background: var(--light-blue);
+
     color: var(--navy);
+
     padding: 0.25rem 0.6rem;
+
     border-radius: 100px;
   }
 
   .card-link {
     font-size: 0.8rem;
+
     color: var(--blue);
+
     text-decoration: none;
+
     font-weight: 500;
+
     display: flex;
+
     align-items: center;
+
     gap: 0.3rem;
+
     transition: gap 0.2s;
   }
 
@@ -441,62 +628,96 @@
     gap: 0.5rem;
   }
 
-  /* EXPERIENCE */
+  /* =========================
+     CAREER / EXPERIENCE
+     ========================= */
+
   #experience {
     background: var(--bg);
   }
 
   .timeline {
     position: relative;
+
     padding-left: 2rem;
   }
 
   .timeline::before {
     content: '';
+
     position: absolute;
+
     left: 6px;
+
     top: 8px;
+
     bottom: 8px;
+
     width: 2px;
+
     background: var(--light-blue);
   }
 
   .timeline-item {
     position: relative;
+
     margin-bottom: 2.5rem;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
   }
 
   .timeline-dot {
     position: absolute;
+
     left: -1.85rem;
+
     top: 6px;
+
     width: 14px;
+
     height: 14px;
+
     border-radius: 50%;
+
     background: var(--blue);
+
     border: 2px solid white;
-    box-shadow: 0 0 0 2px var(--blue);
+
+    box-shadow:
+      0 0 0 2px var(--blue);
   }
 
   .timeline-period {
     font-size: 0.75rem;
+
     color: var(--blue);
+
     font-weight: 500;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
     margin-bottom: 0.25rem;
   }
 
   .timeline-role {
     font-weight: 600;
+
     font-size: 1rem;
+
     color: var(--navy);
+
     margin-bottom: 0.15rem;
   }
 
   .timeline-co {
     font-size: 0.875rem;
+
     color: var(--muted);
+
     margin-bottom: 0.75rem;
   }
 
@@ -506,22 +727,34 @@
 
   .timeline-bullets li {
     font-size: 0.875rem;
+
     color: var(--muted);
+
     padding: 0.2rem 0;
+
     padding-left: 1rem;
+
     position: relative;
   }
 
   .timeline-bullets li::before {
     content: '▸';
+
     position: absolute;
+
     left: 0;
+
     color: var(--blue);
+
     font-size: 0.7rem;
+
     top: 0.3rem;
   }
 
-  /* CONTACT */
+  /* =========================
+     CONTACT
+     ========================= */
+
   #contact {
     background: var(--navy);
   }
@@ -540,37 +773,55 @@
 
   .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    grid-template-columns:
+      repeat(auto-fit, minmax(200px, 1fr));
+
     gap: 1.5rem;
+
     margin-top: 1rem;
   }
 
   .contact-card {
     background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
+
+    border:
+      1px solid rgba(255,255,255,0.12);
+
     border-radius: 10px;
+
     padding: 1.5rem;
+
     text-align: center;
   }
 
   .contact-icon {
     font-size: 1.5rem;
+
     margin-bottom: 0.75rem;
   }
 
   .contact-label {
     font-size: 0.75rem;
+
     color: rgba(255,255,255,0.5);
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
+
     margin-bottom: 0.4rem;
   }
 
   .contact-value {
     color: white;
+
     font-size: 0.9rem;
+
     font-weight: 500;
+
     text-decoration: none;
+
     word-break: break-all;
   }
 
@@ -578,22 +829,38 @@
     color: var(--accent);
   }
 
-  /* FOOTER */
+  /* =========================
+     FOOTER
+     ========================= */
+
   footer {
     background: #0f2d4a;
+
     padding: 1.5rem 2rem;
+
     text-align: center;
+
     font-size: 0.8rem;
+
     color: rgba(255,255,255,0.35);
   }
 
+  /* =========================
+     MOBILE
+     ========================= */
+
   @media (max-width: 700px) {
+
     .about-grid {
       grid-template-columns: 1fr;
     }
 
     .hero-stats {
       gap: 1.5rem;
+    }
+
+    nav {
+      padding: 0 1rem;
     }
 
     nav ul {
@@ -603,29 +870,66 @@
     nav ul a {
       font-size: 0.75rem;
     }
+
+    section {
+      padding: 4rem 1.25rem;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
   }
+
 </style>
 
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- =========================
+     NAVIGATION
+     ========================= -->
 
 <nav>
-  <div class="logo">Margaret <span>Muriuki</span></div>
+
+  <div class="logo">
+    Margaret <span>Muriuki</span>
+  </div>
 
   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#approach">How I Work</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
+
+    <li>
+      <a href="#about">About</a>
+    </li>
+
+    <li>
+      <a href="#approach">How I Work</a>
+    </li>
+
+    <li>
+      <a href="#portfolio">Portfolio</a>
+    </li>
+
+    <li>
+      <a href="#experience">Career</a>
+    </li>
+
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+
   </ul>
+
 </nav>
 
-
-<!-- HERO -->
+<!-- =========================
+     HERO
+     ========================= -->
 
 <section class="hero">
 
@@ -645,30 +949,65 @@
     </p>
 
     <div class="hero-ctas">
-      <a href="#portfolio" class="btn-primary">View My Work</a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
+
+      <a href="#portfolio" class="btn-primary">
+        View My Work
+      </a>
+
+      <a href="#contact" class="btn-outline">
+        Get in Touch
+      </a>
+
     </div>
 
     <div class="hero-stats">
 
       <div class="stat">
-        <div class="stat-num">17</div>
-        <div class="stat-label">African Countries Supported</div>
+
+        <div class="stat-num">
+          17
+        </div>
+
+        <div class="stat-label">
+          African Countries Supported
+        </div>
+
       </div>
 
       <div class="stat">
-        <div class="stat-num">3K+</div>
-        <div class="stat-label">Monthly Support Requests</div>
+
+        <div class="stat-num">
+          3K+
+        </div>
+
+        <div class="stat-label">
+          Monthly Support Requests
+        </div>
+
       </div>
 
       <div class="stat">
-        <div class="stat-num">99%+</div>
-        <div class="stat-label">SLA Compliance</div>
+
+        <div class="stat-num">
+          99%+
+        </div>
+
+        <div class="stat-label">
+          SLA Compliance
+        </div>
+
       </div>
 
       <div class="stat">
-        <div class="stat-num">25%</div>
-        <div class="stat-label">Faster Resolution</div>
+
+        <div class="stat-num">
+          25%
+        </div>
+
+        <div class="stat-label">
+          Faster Resolution
+        </div>
+
       </div>
 
     </div>
@@ -677,8 +1016,9 @@
 
 </section>
 
-
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+     ========================= -->
 
 <section id="about">
 
@@ -688,7 +1028,9 @@
 
       <div class="about-text">
 
-        <p class="section-label">About Me</p>
+        <p class="section-label">
+          About Me
+        </p>
 
         <h2 class="section-title">
           I make complex technology easier for people to use.
@@ -710,28 +1052,78 @@
 
       <div>
 
-        <p class="section-label" style="margin-bottom:1rem;">
+        <p
+          class="section-label"
+          style="margin-bottom:1rem;"
+        >
           What I Bring
         </p>
 
         <div class="skills-grid">
 
-          <div class="skill-tag">Customer Onboarding</div>
-          <div class="skill-tag">User Adoption</div>
-          <div class="skill-tag">Process Discovery</div>
-          <div class="skill-tag">Workflow Documentation</div>
-          <div class="skill-tag">Customer Support</div>
-          <div class="skill-tag">Problem Solving</div>
-          <div class="skill-tag">Process Improvement</div>
-          <div class="skill-tag">Knowledge Bases</div>
-          <div class="skill-tag">SOP Development</div>
-          <div class="skill-tag">SLA Management</div>
-          <div class="skill-tag">AI Tools</div>
-          <div class="skill-tag">Workflow Automation</div>
-          <div class="skill-tag">Microsoft 365</div>
-          <div class="skill-tag">Google Workspace</div>
-          <div class="skill-tag">ServiceNow</div>
-          <div class="skill-tag">Stakeholder Support</div>
+          <div class="skill-tag">
+            Customer Onboarding
+          </div>
+
+          <div class="skill-tag">
+            User Adoption
+          </div>
+
+          <div class="skill-tag">
+            Process Discovery
+          </div>
+
+          <div class="skill-tag">
+            Workflow Documentation
+          </div>
+
+          <div class="skill-tag">
+            Customer Support
+          </div>
+
+          <div class="skill-tag">
+            Problem Solving
+          </div>
+
+          <div class="skill-tag">
+            Process Improvement
+          </div>
+
+          <div class="skill-tag">
+            Knowledge Bases
+          </div>
+
+          <div class="skill-tag">
+            SOP Development
+          </div>
+
+          <div class="skill-tag">
+            SLA Management
+          </div>
+
+          <div class="skill-tag">
+            AI Tools
+          </div>
+
+          <div class="skill-tag">
+            Workflow Automation
+          </div>
+
+          <div class="skill-tag">
+            Microsoft 365
+          </div>
+
+          <div class="skill-tag">
+            Google Workspace
+          </div>
+
+          <div class="skill-tag">
+            ServiceNow
+          </div>
+
+          <div class="skill-tag">
+            Stakeholder Support
+          </div>
 
         </div>
 
@@ -743,14 +1135,17 @@
 
 </section>
 
-
-<!-- HOW I WORK -->
+<!-- =========================
+     HOW I WORK
+     ========================= -->
 
 <section id="approach">
 
   <div class="container">
 
-    <p class="section-label">How I Work</p>
+    <p class="section-label">
+      How I Work
+    </p>
 
     <h2 class="section-title">
       From messy process to something people can use.
@@ -763,51 +1158,99 @@
     <div class="approach-grid">
 
       <div class="approach-card">
-        <div class="approach-number">01</div>
-        <div class="approach-title">Understand</div>
+
+        <div class="approach-number">
+          01
+        </div>
+
+        <div class="approach-title">
+          Understand
+        </div>
+
         <div class="approach-text">
           Listen to the user and understand the goal, pain points and current process.
         </div>
+
       </div>
 
       <div class="approach-card">
-        <div class="approach-number">02</div>
-        <div class="approach-title">Map</div>
+
+        <div class="approach-number">
+          02
+        </div>
+
+        <div class="approach-title">
+          Map
+        </div>
+
         <div class="approach-text">
           Break the process into steps, decisions, exceptions and handoffs.
         </div>
+
       </div>
 
       <div class="approach-card">
-        <div class="approach-number">03</div>
-        <div class="approach-title">Build</div>
+
+        <div class="approach-number">
+          03
+        </div>
+
+        <div class="approach-title">
+          Build
+        </div>
+
         <div class="approach-text">
           Create a practical workflow, checklist, guide or automation that solves the problem.
         </div>
+
       </div>
 
       <div class="approach-card">
-        <div class="approach-number">04</div>
-        <div class="approach-title">Test</div>
+
+        <div class="approach-number">
+          04
+        </div>
+
+        <div class="approach-title">
+          Test
+        </div>
+
         <div class="approach-text">
           Try the process from the user's perspective and identify what could go wrong.
         </div>
+
       </div>
 
       <div class="approach-card">
-        <div class="approach-number">05</div>
-        <div class="approach-title">Document</div>
+
+        <div class="approach-number">
+          05
+        </div>
+
+        <div class="approach-title">
+          Document
+        </div>
+
         <div class="approach-text">
           Turn the solution into clear documentation others can follow without hand-holding.
         </div>
+
       </div>
 
       <div class="approach-card">
-        <div class="approach-number">06</div>
-        <div class="approach-title">Improve</div>
+
+        <div class="approach-number">
+          06
+        </div>
+
+        <div class="approach-title">
+          Improve
+        </div>
+
         <div class="approach-text">
           Use feedback and recurring issues to make the process simpler and more effective.
         </div>
+
       </div>
 
     </div>
@@ -816,14 +1259,17 @@
 
 </section>
 
-
-<!-- PORTFOLIO -->
+<!-- =========================
+     PORTFOLIO
+     ========================= -->
 
 <section id="portfolio">
 
   <div class="container">
 
-    <p class="section-label">Portfolio</p>
+    <p class="section-label">
+      Portfolio
+    </p>
 
     <h2 class="section-title">
       Turning processes into practical tools.
@@ -835,16 +1281,18 @@
 
     <div class="portfolio-grid">
 
-
       <!-- CARD 1 -->
 
       <div class="portfolio-card">
 
         <div class="card-header">
 
-          <div class="card-icon blue">📋</div>
+          <div class="card-icon blue">
+            📋
+          </div>
 
           <div>
+
             <div class="card-title">
               End-to-End Onboarding Workflow
             </div>
@@ -852,6 +1300,7 @@
             <div class="card-subtitle">
               Excel Tracker · 24-step framework
             </div>
+
           </div>
 
         </div>
@@ -859,7 +1308,7 @@
         <div class="card-body">
 
           <p>
-            A structured onboarding workflow covering registration, verification, training, enablement and activation. The framework breaks a multi-step process into clear actions, ownership and status tracking.
+            A structured onboarding workflow demonstrating how a multi-step process can be broken into clear actions, ownership, dependencies and status tracking.
           </p>
 
         </div>
@@ -870,7 +1319,11 @@
             Workflow / Operations
           </span>
 
-          <a href="Agent_Onboarding_Portfolio.xlsx" class="card-link" download>
+          <a
+            href="Agent_Onboarding_Portfolio.xlsx"
+            class="card-link"
+            download
+          >
             View Tool ↓
           </a>
 
@@ -878,23 +1331,26 @@
 
       </div>
 
-
       <!-- CARD 2 -->
 
       <div class="portfolio-card">
 
         <div class="card-header">
 
-          <div class="card-icon green">📘</div>
+          <div class="card-icon green">
+            📘
+          </div>
 
           <div>
+
             <div class="card-title">
               Quick-Start User Guide
             </div>
 
             <div class="card-subtitle">
-              Word Document · User enablement
+              Word Document · User Enablement
             </div>
+
           </div>
 
         </div>
@@ -902,7 +1358,7 @@
         <div class="card-body">
 
           <p>
-            A step-by-step guide designed to take a new user from account setup through the key actions they need to become productive. The focus is on clear instructions, practical examples and reducing avoidable support questions.
+            A practical user guide demonstrating how complex system processes can be translated into clear, easy-to-follow instructions that help users become productive faster.
           </p>
 
         </div>
@@ -913,7 +1369,11 @@
             Documentation / Enablement
           </span>
 
-          <a href="Agent_Quick_Start_Guide.docx" class="card-link" download>
+          <a
+            href="Agent_Quick_Start_Guide.docx"
+            class="card-link"
+            download
+          >
             View Guide ↓
           </a>
 
@@ -921,16 +1381,18 @@
 
       </div>
 
-
       <!-- CARD 3 -->
 
       <div class="portfolio-card">
 
         <div class="card-header">
 
-          <div class="card-icon amber">🔄</div>
+          <div class="card-icon amber">
+            🔄
+          </div>
 
           <div>
+
             <div class="card-title">
               Process Improvement Framework
             </div>
@@ -938,6 +1400,7 @@
             <div class="card-subtitle">
               5-stage methodology
             </div>
+
           </div>
 
         </div>
@@ -956,7 +1419,10 @@
             Process Design
           </span>
 
-          <a href="mailto:maggiewmuriuki@gmail.com" class="card-link">
+          <a
+            href="mailto:maggiewmuriuki@gmail.com"
+            class="card-link"
+          >
             Discuss →
           </a>
 
@@ -964,23 +1430,26 @@
 
       </div>
 
-
       <!-- CARD 4 -->
 
       <div class="portfolio-card">
 
         <div class="card-header">
 
-          <div class="card-icon coral">📊</div>
+          <div class="card-icon coral">
+            📊
+          </div>
 
           <div>
+
             <div class="card-title">
               Performance & Operations Tracker
             </div>
 
             <div class="card-subtitle">
-              KPI tracking & reporting
+              KPI Tracking & Reporting
             </div>
+
           </div>
 
         </div>
@@ -999,7 +1468,11 @@
             Analytics / Reporting
           </span>
 
-          <a href="Agent_Onboarding_Portfolio.xlsx" class="card-link" download>
+          <a
+            href="Agent_Onboarding_Portfolio.xlsx"
+            class="card-link"
+            download
+          >
             View Tool ↓
           </a>
 
@@ -1013,25 +1486,27 @@
 
 </section>
 
-
-<!-- EXPERIENCE -->
+<!-- =========================
+     CAREER
+     ========================= -->
 
 <section id="experience">
 
   <div class="container">
 
-    <p class="section-label">Experience</p>
+    <p class="section-label">
+      Career
+    </p>
 
     <h2 class="section-title">
-      A career built around people, systems and service.
+      Experience across customers, technology and operations.
     </h2>
 
     <p class="section-sub">
-      Experience across enterprise technology, digital platforms, service operations and customer-facing support in Kenya and across Africa — with a consistent focus on helping people use technology effectively.
+      A career spanning enterprise technology, digital platforms and service operations — with a consistent focus on helping people use systems effectively, solving problems and improving the processes behind the service.
     </p>
 
     <div class="timeline">
-
 
       <!-- COMPUTEC -->
 
@@ -1054,7 +1529,7 @@
         <ul class="timeline-bullets">
 
           <li>
-            Support users across enterprise environments, acting as a first point of contact for technical issues, access requests and service-related problems.
+            Support users across enterprise environments, helping them resolve technical issues, access problems and service-related challenges so they can continue working effectively.
           </li>
 
           <li>
@@ -1062,21 +1537,20 @@
           </li>
 
           <li>
-            Troubleshoot Microsoft 365, endpoint, identity, access and application issues and coordinate escalations where specialist intervention is required.
+            Troubleshoot Microsoft 365, endpoint, identity, access and application issues, coordinating escalations when specialist intervention is required.
           </li>
 
           <li>
-            Create knowledge articles, troubleshooting documentation and repeatable support processes to reduce recurring questions and improve user self-service.
+            Identify recurring user problems and turn solutions into knowledge articles, troubleshooting guides and repeatable support processes.
           </li>
 
           <li>
-            Identify recurring service issues and workflow opportunities, using process improvements and automation to reduce average resolution time by approximately 25%.
+            Improve workflows and introduce automation opportunities to reduce repetitive work and contribute to approximately 25% faster resolution.
           </li>
 
         </ul>
 
       </div>
-
 
       <!-- ISON -->
 
@@ -1099,29 +1573,28 @@
         <ul class="timeline-bullets">
 
           <li>
-            Managed service performance and SLA delivery across a multi-country support environment covering 17 African countries.
+            Managed service performance across a multi-country support environment covering 17 African countries, balancing customer needs, operational targets and service commitments.
           </li>
 
           <li>
-            Monitored service trends, escalations and recurring issues and worked with teams to improve operational performance and customer experience.
+            Monitored service trends, escalations and recurring customer issues and worked with teams to identify practical improvements.
           </li>
 
           <li>
-            Supported user training and adoption by translating technical processes into practical guidance that users could follow.
+            Supported training and user adoption by translating technical processes into clear, practical guidance for users and support teams.
           </li>
 
           <li>
-            Produced regular performance reporting and communicated service issues, trends and improvement areas to stakeholders.
+            Produced performance reporting and communicated service issues, trends and improvement opportunities to stakeholders.
           </li>
 
           <li>
-            Used service data and recurring feedback to identify opportunities for process improvement and more consistent service delivery.
+            Used SLA and service data to identify recurring problems, improve accountability and strengthen the customer support experience.
           </li>
 
         </ul>
 
       </div>
-
 
       <!-- CELLULANT -->
 
@@ -1144,25 +1617,24 @@
         <ul class="timeline-bullets">
 
           <li>
-            Supported users and partners working with digital banking and mobile payment platforms.
+            Supported users and partners working with digital banking and mobile payment platforms, helping them resolve issues and use the services effectively.
           </li>
 
           <li>
-            Investigated and resolved platform and service issues while coordinating escalations when required.
+            Investigated platform and service issues, explained problems clearly to users and coordinated escalations when required.
           </li>
 
           <li>
-            Helped users understand systems and processes so they could work more effectively with digital platforms.
+            Helped users understand digital systems and processes, reducing friction and enabling more confident use of technology.
           </li>
 
           <li>
-            Identified recurring user and platform issues and contributed to clearer support processes and practical troubleshooting guidance.
+            Captured recurring issues and practical solutions to support more consistent service delivery.
           </li>
 
         </ul>
 
       </div>
-
 
       <!-- KENYA AIRWAYS -->
 
@@ -1185,11 +1657,11 @@
         <ul class="timeline-bullets">
 
           <li>
-            Managed IT service requests and incidents for users across the organisation.
+            Provided front-line technology support to users across the organisation, helping employees resolve incidents and service requests efficiently.
           </li>
 
           <li>
-            Investigated problems, documented solutions and escalated issues requiring specialist support.
+            Investigated problems, documented solutions and coordinated escalations for issues requiring specialist support.
           </li>
 
           <li>
@@ -1197,7 +1669,7 @@
           </li>
 
           <li>
-            Helped users navigate technology and service processes while maintaining clear communication through issue resolution.
+            Built practical knowledge of how users interact with technology and where unclear processes create avoidable support issues.
           </li>
 
         </ul>
@@ -1210,14 +1682,17 @@
 
 </section>
 
-
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+     ========================= -->
 
 <section id="contact">
 
   <div class="container">
 
-    <p class="section-label">Contact</p>
+    <p class="section-label">
+      Contact
+    </p>
 
     <h2 class="section-title">
       Let's build something useful.
@@ -1229,57 +1704,78 @@
 
     <div class="contact-grid">
 
+      <!-- EMAIL -->
 
       <div class="contact-card">
 
-        <div class="contact-icon">📧</div>
+        <div class="contact-icon">
+          📧
+        </div>
 
         <div class="contact-label">
           Email
         </div>
 
-        <a href="mailto:maggiewmuriuki@gmail.com" class="contact-value">
+        <a
+          href="mailto:maggiewmuriuki@gmail.com"
+          class="contact-value"
+        >
           maggiewmuriuki@gmail.com
         </a>
 
       </div>
 
+      <!-- PHONE -->
 
       <div class="contact-card">
 
-        <div class="contact-icon">📱</div>
+        <div class="contact-icon">
+          📱
+        </div>
 
         <div class="contact-label">
           Phone / WhatsApp
         </div>
 
-        <a href="tel:+254720689083" class="contact-value">
+        <a
+          href="tel:+254720689083"
+          class="contact-value"
+        >
           +254 720 689 083
         </a>
 
       </div>
 
+      <!-- LINKEDIN -->
 
       <div class="contact-card">
 
-        <div class="contact-icon">💼</div>
+        <div class="contact-icon">
+          💼
+        </div>
 
         <div class="contact-label">
           LinkedIn
         </div>
 
-        <a href="https://linkedin.com/in/margaret-muriuki-7355883b"
-           target="_blank"
-           class="contact-value">
+        <a
+          href="https://linkedin.com/in/margaret-muriuki-7355883b"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-value"
+        >
           margaret-muriuki
         </a>
 
       </div>
 
+      <!-- LOCATION -->
 
       <div class="contact-card">
 
-        <div class="contact-icon">📍</div>
+        <div class="contact-icon">
+          📍
+        </div>
 
         <div class="contact-label">
           Location
@@ -1297,12 +1793,35 @@
 
 </section>
 
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+     ========================= -->
 
 <footer>
+
   © 2026 Margaret Muriuki · Customer Success & Operations Specialist · Nairobi, Kenya
+
 </footer>
 
 </body>
+
 </html>
+```
+
+ ### One thing before you paste
+
+ I deliberately **did not rename** these two physical files:
+
+ - `Agent_Onboarding_Portfolio.xlsx`
+- `Agent_Quick_Start_Guide.docx`
+
+ because changing the links in `index.html` without also renaming the actual files in your GitHub repository would make the downloads stop working.
+
+ The **visible website wording is now neutral** and does not present "Agent Onboarding" as your career.
+
+ After you paste and commit this, the Career section should visibly read:
+
+ > **Career**\
+>  **Experience across customers, technology and operations.**
+
+ and then your actual career history, with the descriptions emphasizing the customer-facing/process/operations aspects relevant to Bolter.
